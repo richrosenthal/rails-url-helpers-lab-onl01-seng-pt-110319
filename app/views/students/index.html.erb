@@ -1,5 +1,10 @@
 <div>
   <% @students.each do |student| %>
     <div><%= student.first_name + " " + student.last_name %></div>
+    <div><%= link_to student.title, post_path(post.id) %></div>
   <% end %>
 </div>
+
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post.id) %></div>
+<% end %>
